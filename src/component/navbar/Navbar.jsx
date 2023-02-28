@@ -16,7 +16,7 @@ const Navbar = () => {
       <div className="container">
         <span className="logo">
           <div className="text">
-            Fiverr <div className="dot">.</div>
+            Fiverr
           </div>
         </span>
         <ul className="navul">

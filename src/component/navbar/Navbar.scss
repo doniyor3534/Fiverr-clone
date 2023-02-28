@@ -1,15 +1,11 @@
-
-:root{
-    --yashil: #1DBF73;
-    
-  }
-
-
+:root {
+  --yashil: #1dbf73;
+}
 
 .navbar {
   width: 100%;
   height: auto;
-  background:linear-gradient(to left , #012e15 ,#013f1d,#012e15) ;
+  background: linear-gradient(to left, #012e15, #013f1d, #012e15);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,22 +14,25 @@
   position: sticky;
   top: 0;
   transition: all 0.3s ease-in;
+  z-index: 555;
 
   &.active {
-    background-color: white;
+    background: white ;
     color: black;
     .container {
+      padding: 15px 5%;
       .navul {
         button {
-          color: #013f1d;
-          border-color: #013f1d;
+          color: #1dbf73;
+          border-color: #1dbf73;
         }
       }
     }
   }
   .container {
-    width: 1440px;
-    padding: 15px 0px;
+    max-width: 1440px;
+    width: 90%;
+    padding: 15px 5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -45,9 +44,18 @@
       .text {
         display: flex;
         align-items: center;
-      }
-      .dot {
-        color: var(--yashil);
+        position: relative;
+
+        &::before{
+          position: absolute;
+          bottom: 9px;
+          right: -5px;
+          content: '';
+          width: 7px;
+          height: 7px;
+          background:var(--yashil);
+          border-radius: 50%;
+        }
       }
     }
     .navul {
@@ -67,6 +75,12 @@
         border-radius: 5px;
         color: white;
         font-weight: 700;
+
+        &:hover{
+          background: #1dbf73;
+          color: white;
+          border-color: #1dbf73;
+        }
       }
     }
   }
@@ -80,7 +94,8 @@
     border-top: 1px solid rgb(209, 209, 209);
 
     .container {
-      width: 1440px;
+      max-width: 1440px;
+      width: 95%;
       height: auto;
       display: flex;
       align-items: center;
@@ -98,11 +113,11 @@
         position: relative;
         outline: none;
         border-bottom: transparent 2px solid;
-        &:hover{
-            border-bottom:  var(--yashil)  2px solid;
-            .navbtncard{
-                display: grid;
-            }
+        &:hover {
+          border-bottom: var(--yashil) 2px solid;
+          .navbtncard {
+            display: grid;
+          }
         }
 
         .new {
@@ -123,13 +138,13 @@
           gap: 20px;
           background-color: white;
           border-radius: 3px;
-          box-shadow: 0px 4px 9px 4px rgba(199,199,199,0.75);
-          -webkit-box-shadow: 0px 4px 9px 4px rgba(199,199,199,0.75);
-          -moz-box-shadow: 0px 4px 9px 4px rgba(199,199,199,0.75);  
+          box-shadow: 0px 4px 9px 4px rgba(199, 199, 199, 0.75);
+          -webkit-box-shadow: 0px 4px 9px 4px rgba(199, 199, 199, 0.75);
+          -moz-box-shadow: 0px 4px 9px 4px rgba(199, 199, 199, 0.75);
           padding: 20px;
           display: none;
-          
-          &.navbtncardright{
+
+          &.navbtncardright {
             right: 0;
             left: auto;
           }
